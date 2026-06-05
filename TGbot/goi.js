@@ -1,20 +1,25 @@
 const { Telegraf, Markup } = require('telegraf');
 require('dotenv').config();
 
-
-const bot = new Telegraf(aaaaa.env.BOT-TOKEN);
+const bot = new Telegraf(process.env.BOT_TOKEN);
 
 bot.start((ctx) => {
     return ctx.reply(
-    'Крч, жми на сегодняний день недели:',
+    'Крч, жми на сегодняшний день недели:',
     Markup.inlineKeyboard([
         [
             Markup.button.callback('Пндльник', 'btn_monday'),
-            Markup.button.callback('Втрник', 'btn_tuesday'),
+            Markup.button.callback('Втрник', 'btn_tuesday')
+        ],
+        [
             Markup.button.callback('Среда чуваки!', 'btn_wednesday'),
-            Markup.button.callback('Четерег', 'btn_thursday'),
+            Markup.button.callback('Четерег', 'btn_thursday')
+        ],
+        [
             Markup.button.callback('Пятица', 'btn_friday'),
-            Markup.button.callback('Сбт', 'btn_saturday'),
+            Markup.button.callback('Сбт', 'btn_saturday')
+        ],
+        [
             Markup.button.callback('Вс', 'btn_sunday')
         ]
     ])
@@ -26,7 +31,7 @@ bot.action('btn_monday', async (ctx) => {
 
     await ctx.replyWithPhoto(
     { url: 'https://i.pinimg.com/736x/4f/f7/c2/4ff7c24ca248b3875dbd5bf28f9aeb5a.jpg' },
-    { caption: 'Начало неделти? Ну ты лох...' }   
+    { caption: 'Начало недели? Ну ты лох...' }   
     )
 });
 
@@ -53,7 +58,7 @@ bot.action('btn_thursday', async (ctx) => {
 
     await ctx.replyWithPhoto(
     { url: 'https://i.pinimg.com/736x/37/6b/f6/376bf63e48d6ad57c1e8f89112e3bc0b.jpg' },
-    { caption: 'Второй лучий день недели!' }   
+    { caption: 'Второй лучший день недели!' }   
     )
 });
 
