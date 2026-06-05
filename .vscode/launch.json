@@ -6,18 +6,13 @@
     "configurations": [
         
         {
-            "name": "Attach to Chrome",
-            "port": 9222,
-            "request": "attach",
-            "type": "chrome",
-            "webRoot": "${workspaceFolder}"
-        },
-        {
-            "name": "Attach to Integrated Browser",
-            "request": "attach",
-            "type": "editor-browser",
-            "webRoot": "${workspaceFolder}"
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\рррр ацагшщи.js"
         }
-
     ]
 }
